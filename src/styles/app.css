@@ -1,0 +1,32 @@
+body {
+  font-family: Poppins;
+  overflow: hidden;
+}
+
+.list-item:hover {
+  background-color: #242A38;
+  color:  #12B981;
+}
+
+.menu-top {
+  background-color: #192030;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  height: 50px;
+  justify-content: center;
+  line-height: 0.5;
+  margin-left: 16px;
+  padding: 24px 16px 8px;
+  width: 180px;
+}
+
+.menu-top p {
+  color: rgb(170, 167, 167);
+  font-size: 12px;
+}
+
+hr {
+  margin: 16px 0;
+}
