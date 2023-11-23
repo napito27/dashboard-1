@@ -6,7 +6,7 @@ import  { Box, CssBaseline }  from '@mui/material';
 import "../styles/app.css"
 
 function Layout( {children} ) {
-  const [header, menu] = children;
+  const [header, menu, kpi] = children;
 
   return (
     <Box style={{display: "flex", height: "100vh"}}>
@@ -21,10 +21,10 @@ function Layout( {children} ) {
             {header}
           </Grid>
           <Grid container >
-            <Grid xs={3}>PKI</Grid>
-            <Grid xs={3}>PKI</Grid>
-            <Grid xs={3}>PKI</Grid>
-            <Grid xs={3}>PKI</Grid>
+            <Grid xs={3}>{kpi}</Grid>
+            <Grid xs={3}>{kpi}</Grid>
+            <Grid xs={3}>{kpi}</Grid>
+            <Grid xs={3}>{kpi}</Grid>
           </Grid>
           <Grid container >
             <Grid>Container 1</Grid>
