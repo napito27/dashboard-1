@@ -1,33 +1,36 @@
 import React from 'react';
 
-import PeopleIcon from '@mui/icons-material/People';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { Box, Avatar, Paper, InputBase } from '@mui/material';
+import avatarImage from "../utils/man-beard.webp";
 
-import { Box, Avatar, Paper } from '@mui/material';
+import { 
+  PeopleOutlineOutlined,
+  NotificationsNoneOutlined,
+  SearchOutlined
+} from '@mui/icons-material';
 
-const ICON_STYLES = {
-  alignItems: "center",
-  backgroundColor: "#FFFFFF",
-  color: "#6B7280",
-  display: "flex",
-  gap: "10px",
-  height: "50px",
-  justifyContent:"space-between",
-  paddingRight: "8px"
-}
-
-function Header() {
-
+function Header({ search, onSearch, onSearchType }) {
+  const onKeyDownHandler = (event) => {
+    if (event.key === "Enter") {
+      onSearch();
+      console.log(event.target.value);
+    }
+  }
+  
   return (
-    <Paper style={ICON_STYLES} elevation={3}>
-      <Box style={ICON_STYLES}>  
-        <SearchOutlinedIcon />
+    <Paper className='header-styles' elevation={1}>
+      <Box className='header-styles'>  
+        <SearchOutlined />
+        <InputBase style={{ flex: 1 }} placeholder="Search " 
+          value={search} 
+          onKeyDown={onKeyDownHandler} 
+          onChange={onSearchType}
+        />
       </Box>
-      <Box style={ICON_STYLES}>
-        <PeopleIcon />
-        <NotificationsIcon />
-        <Avatar alt="user photo" src="" />
+      <Box className='header-styles'>
+        <PeopleOutlineOutlined />
+        <NotificationsNoneOutlined />
+        <Avatar alt="user photo" src={avatarImage} />
       </Box>
     </Paper>
   );

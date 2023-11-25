@@ -1,14 +1,47 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Poppins;
+  font-family: "Poppins";
   overflow: hidden;
 }
 
+/**  header styles*/
+.header-styles {
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #6B7280;
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  justify-content:space-between;
+  padding-right: 8px;
+}
+
+/**  menu styles */
+.main-logo {
+  margin-bottom: 16px ;
+}
+.auto-complete {
+  background-color: #192030;
+  color: #6B7280;
+  padding: 0px;
+  width: 180px;
+}
+.menu-container {
+  align-items: center; 
+  background-color: #101727; 
+  color: #BCC2CE;
+  padding-top: 16px;
+}
 .list-item:hover {
   background-color: #242A38;
   color:  #12B981;
 }
-
-.menu-top {
+/* .menu-top {
   background-color: #192030;
   border-radius: 4px;
   display: flex;
@@ -21,12 +54,30 @@ body {
   padding: 24px 16px 8px;
   width: 180px;
 }
-
 .menu-top p {
   color: rgb(170, 167, 167);
   font-size: 12px;
-}
-
+} */
 hr {
   margin: 16px 0;
+}
+
+/**  KPI card styles*/
+.card-title {
+  text-transform: uppercase;
+  color: #9396A1;
+}
+.card * {
+  margin: 8px 0px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-icon {
+  padding-top: 20px;
+}
+.card-footer {
+  padding: 0px;
+  margin: 0px;
 }
