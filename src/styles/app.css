@@ -1,0 +1,178 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  overflow: hidden;
+}
+
+/**  header styles*/
+.header-container {
+  display: flex;
+  height: 60px;
+  justify-content:space-between;
+  width: 100%;
+}
+.header-search-container {
+  align-items: center;
+  color: #6B7280;
+  display: flex;
+  flex: 1;
+  padding: 0px 20px;
+}
+.header-icon-container {
+  align-items: center;
+  color: #6B7280;
+  display: flex;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+/**  menu styles */
+.main-logo {
+  margin-bottom: 16px ;
+}
+.basic-input-container {
+  width: 210px;
+  padding: 0px 10px;
+  /* background-color:#192030 ; */
+}
+.basic-input-form {
+  border-radius: 8px;
+  background-color: #192030;
+}
+.select-label {
+  color: #6B7280;
+}
+.text {
+  color: #6B7280;
+}
+.menu-container {
+  align-items: center; 
+  background-color: #101727; 
+  color: #BCC2CE;
+  padding-top: 16px;
+}
+.list-item:hover {
+  background-color: #242A38;
+  color:  #12B981;
+}
+hr {
+  margin: 16px 0;
+}
+
+/**  KPI card styles*/
+.kpi-container {
+  min-height: 150px;
+  padding: 0px 20px;
+}
+.card-header-container {
+  display: flex;
+}
+.card-title-container {
+  flex: 1;
+  line-height: 8px;
+}
+.card-title {
+  color: #9396A1;
+  text-transform: uppercase;
+}
+.card-icon-container {
+  padding: 24px 0px;
+}
+.card-container {
+  display: flex;
+  height: 170px;
+  justify-content: space-between;
+}
+.progress-bar {
+  padding-top: 16px;
+  width: 100%;
+}
+.increase {
+  color: #14B8A7;
+  margin-bottom: -4px;
+}
+.decrease {
+  color: #CD4344;
+  margin-bottom: -4px;
+}
+.gain {
+  color: black;
+  font-weight: 500;
+}
+.kpi-footer {
+  color: #9396A1;
+}
+
+/**  bar chart styles **/
+.bar-chart-container {
+  min-height: 480px;
+}
+.bar-chart-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+.bar-chart-title h3 {
+  margin: 0px;
+}
+.bar-chart-info {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.chart-filter {
+  color: #3F51B4;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.current-year span {
+  background-color: #3F51B4;
+  color: #3F51B4;
+  font-size: 0.8rem;
+}
+.last-year span {
+  background-color: #EEEEEE;
+  color: #EEEEEE;
+  font-size: 0.8rem;
+}
+.bar-chart {
+  display: flex;
+  justify-content: center;
+}
+
+/** pie chart styles **/
+.pie-chart-container {
+  min-height: 480px;
+}
+.pie-chart-header {
+  margin: 0;
+  padding: 32px;
+}
+.pie-chart-icons {
+  color: #6B7280;
+  display: flex;
+  justify-content: space-around;
+  width: 280px;
+}
+table {
+  width: 285px;
+}
+.pie-chart-table tbody th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0px 12px;
+}
+.pie-chart-table tbody tr:last-child {
+  font-size: 2rem;
+  padding: 0px 12px;
+}
+.pie-chart-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
