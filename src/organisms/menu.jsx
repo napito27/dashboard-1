@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, List, ListItem, ListItemText, ListItemButton, Avatar, Autocomplete, TextField, IconButton } from "@mui/material";
+import { Box, List, ListItem, ListItemText, ListItemButton, Avatar } from "@mui/material";
 
 import { 
   SignalCellularAltOutlined,
@@ -9,20 +9,16 @@ import {
   PersonOutlined,
   SettingsOutlined,
   LockOutlined,
-  UnfoldMoreOutlined,
+  // UnfoldMoreOutlined,
   PersonAddAlt1Outlined,
   CancelOutlined
 } from '@mui/icons-material';
 
+import BasicSelect from '../atoms/select';
+
 import logo from "../utils/logo.png";
 
 import "../styles/app.css";
-
-const membership = [
-  { label: "Basic"},
-  { label: "Medium"},
-  { label: "Premium"}
-]
 
 const MENU_STYLES = {
   display: "flex",
@@ -39,36 +35,7 @@ function Menu() {
   return (
     <Box className="menu-container" >
       <Avatar src={logo} className='main-logo'/>
-      {/* <Box className="menu-top"> */}
-      {/* <Autocomplete
-        disablePortal
-        className='auto-complete'
-        options={membership}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Acme Inc"
-            disablePadding
-            sx={{width: "100%", padding: "0px", margin:"0px"}}
-            InputProps={{
-              ...params.InputProps,
-              endAdornment: (
-                <IconButton> 
-                  <UnfoldMoreOutlined sx={{color: "#6B7280"}}/>
-                </IconButton>
-              ),
-            }}
-          />
-        )}
-      /> */}
-      <Autocomplete
-        disablePortal
-        id="memberships"
-        options={membership}
-        sx={{ width:"100%" }}
-        renderInput={(params) => <TextField {...params} label="Acme Inc" />}
-      />
-      {/* </Box> */}
+      <BasicSelect />
       <hr />
       <Box style={MENU_STYLES} >
         <List>

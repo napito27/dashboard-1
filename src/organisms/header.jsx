@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { Box, Avatar, Paper, InputBase } from '@mui/material';
-import avatarImage from "../utils/man-beard.webp";
 
 import { 
   PeopleOutlineOutlined,
   NotificationsNoneOutlined,
   SearchOutlined
 } from '@mui/icons-material';
+
+import avatarImage from "../utils/man-beard.webp";
 
 function Header({ search, onSearch, onSearchType }) {
   const onKeyDownHandler = (event) => {
@@ -18,16 +19,16 @@ function Header({ search, onSearch, onSearchType }) {
   }
   
   return (
-    <Paper className='header-styles' elevation={1}>
-      <Box className='header-styles'>  
+    <Paper className='header-container' elevation={1}>
+      <Box className='header-search-container'>  
         <SearchOutlined />
-        <InputBase style={{ flex: 1 }} placeholder="Search " 
+        <InputBase style={{ flex: 1 }}  
           value={search} 
           onKeyDown={onKeyDownHandler} 
           onChange={onSearchType}
         />
       </Box>
-      <Box className='header-styles'>
+      <Box className='header-icon-container'>
         <PeopleOutlineOutlined />
         <NotificationsNoneOutlined />
         <Avatar alt="user photo" src={avatarImage} />
